@@ -53,7 +53,10 @@ int main()
         {
             printf("Que voulez vous jouer ? Pierre (1), Feuille (2) ou Ciseaux (3) ? ");
         } while (scanf("%d", &choice) != 1 || choice < 1 || choice > 3);
+
         clean_stdin();
+        item = rand() % 3 + 1;
+        
         printf("Le joueur joue : %s | La machine joue : %s\n", items[choice - 1], items[item - 1]);
         if (((choice == 1) && (item == 2)) || ((choice == 2) && (item == 3)) || ((choice == 3) && (item == 1)))
         {
